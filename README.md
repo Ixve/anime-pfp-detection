@@ -8,18 +8,19 @@ Requirements:
 * GCC
 * Make
 * Python 3
+* jq
 
 Installing Requirements:
 On Debian/Ubuntu-derived distributions:
 ```
-sudo apt-get install ruby gcc make python3 libmagickwand-dev
+sudo apt-get install ruby gcc make python3 libmagickwand-dev jq
 sudo gem install rmagick
 ```
 
 On Arch-based distributions:
 ```
 sudo pacman -S yay
-yay -S imagemagick-full ruby-rmagick ruby python3
+yay -S imagemagick-full ruby-rmagick ruby python3 jq
 ```
 
 After installing requirements git clone this repo and cd into it then run `chmod +x ./build.sh && ./build.sh`
