@@ -1,6 +1,6 @@
 #!/bin/bash
 url="https://api.imgbb.com/1/upload?expiration=600&key=IMGBB_KEY_HERE"
-temp_file="$XDG_DATA_HOME/animeface-ruby/temp_out.png"
+temp_file="/home/runner/FirmChartreusePreprocessor/animeface-ruby/temp_out.png"
 
 imageurl=$(curl -X POST "$url" -F "image=@"$temp_file)
 echo $imageurl > /tmp/upload.json
