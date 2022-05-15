@@ -20,15 +20,15 @@ async def avatar(ctx, member: discord.User = None):
         member = ctx.message.author
     userAvatar = member.avatar_url
     await ctx.send("Attempting to detect gay: {}".format(userAvatar))
-    os.system("curl {} --output /home/runner/FirmChartreusePreprocessor/animeface-ruby/temp.webp".format(userAvatar))
+    os.system("curl {} --output ~/animeface-ruby/temp.webp".format(userAvatar))
     with open('f.txt', 'w') as f:
-        subprocess.call(['ruby', '/home/runner/FirmChartreusePreprocessor/animeface-ruby/sample.rb', './temp.webp'], stdout=f)            
+        subprocess.call(['ruby', '~/animeface-ruby/sample.rb', './temp.webp'], stdout=f)            
     with open('f.txt', 'r') as c:
         c1 = c.read()
         sw = "\nSee temp_out.png\n"
         if sw in c1:
-            os.system("bash /home/runner/FirmChartreusePreprocessor/animeface-ruby/t.sh")
-            with open('/home/runner/FirmChartreusePreprocessor/animeface-ruby/data.json', 'r') as v:
+            os.system("bash ~/animeface-ruby/t.sh")
+            with open('~/animeface-ruby/data.json', 'r') as v:
                 v1 = v.read()
                 await ctx.send(v1)
         else:
