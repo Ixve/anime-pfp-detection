@@ -9,6 +9,7 @@ Requirements:
 * Make
 * Python 3
 * jq
+* rmagick (Ruby Gem)
 
 Installing Requirements:
 On Debian/Ubuntu-derived distributions:
